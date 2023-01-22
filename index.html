@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <title>Bookmark Manager</title>
+  </head>
+  <body class="bg-gray-200">
+    <div class="dark-mode-toggle">
+        <label class="switch">
+            <input type="checkbox" class="custom-checkbox" onclick="document.body.classList.toggle('dark-mode')">
+            <span class="slider"></span>
+          </label>
+          
+    </div>
+    <div class="container mx-auto flex flex-wrap justify-center">
+        <div class="w-1/4 p-2 card">
+          <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.google.com')">
+            <img class="w-8 h-8" src="google-logo.png" alt="Google">
+            <div class="text-lg font-medium">Google</div>
+          </div>
+        </div>
+        <div class="w-1/4 p-2 card">
+          <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.youtube.com')">
+            <img class="w-8 h-8" src="youtube-logo.png" alt="Youtube">
+            <div class="text-lg font-medium">Youtube</div>
+          </div>
+        </div>
+        <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.google.com')">
+              <img class="w-8 h-8" src="google-logo.png" alt="Google">
+              <div class="text-lg font-medium">Google</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.youtube.com')">
+              <img class="w-8 h-8" src="youtube-logo.png" alt="Youtube">
+              <div class="text-lg font-medium">Youtube</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card" >
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.google.com')">
+              <img class="w-8 h-8" src="google-logo.png" alt="Google">
+              <div class="text-lg font-medium">Google</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.youtube.com')">
+              <img class="w-8 h-8" src="youtube-logo.png" alt="Youtube">
+              <div class="text-lg font-medium">Youtube</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.google.com')">
+              <img class="w-8 h-8" src="google-logo.png" alt="Google">
+              <div class="text-lg font-medium">Google</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.youtube.com')">
+              <img class="w-8 h-8" src="youtube-logo.png" alt="Youtube">
+              <div class="text-lg font-medium">Youtube</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.google.com')">
+              <img class="w-8 h-8" src="google-logo.png" alt="Google">
+              <div class="text-lg font-medium">Google</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.youtube.com')">
+              <img class="w-8 h-8" src="youtube-logo.png" alt="Youtube">
+              <div class="text-lg font-medium">Youtube</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.google.com')">
+              <img class="w-8 h-8" src="google-logo.png" alt="Google">
+              <div class="text-lg font-medium">Google</div>
+            </div>
+          </div>
+          <div class="w-1/4 p-2 card">
+            <div class="bg-white rounded-lg shadow-md p-4 cursor-pointer hover:scale-105 transition-transform duration-200" onclick="window.open('https://www.youtube.com')">
+              <img class="w-8 h-8 " src="youtube-logo.png" alt="Youtube">
+              <div class="text-lg font-medium">Youtube</div>
+            </div>
+          </div>
+          <form id="bookmark-form">
+            <div class="bg-white rounded-lg shadow-md p-4">
+              <div class="flex items-center mb-2">
+                <img class="w-8 h-8" src="standard.png" alt="Standard">
+                <input id="name" class="px-2 py-1 rounded-lg shadow-md" type="text" placeholder="Nome do site">
+              </div>
+              <div class="flex items-center mb-2">
+                <img class="w-8 h-8" src="standard.png" alt="Standard">
+                <input id="link" class="px-2 py-1 rounded-lg shadow-md" type="text" placeholder="URL do site">
+              </div>
+              <div class="feedback"></div>
+              <button class="add-bookmark-button">Adicionar marcador</button>
+
+              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+

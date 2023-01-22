@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bookmark App</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Bookmark App</h1>
+        <div class="row">
+            <div class="col-6">
+                <h2>Default Bookmarks</h2>
+                <div id="default-bookmarks"></div>
+            </div>
+            <div class="col-6">
+                <h2>Custom Bookmarks</h2>
+                <form id="bookmark-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter bookmark name">
+                    </div>
+                    <div class="form-group">
+                        <label for="link">Link</label>
+                        <input type="text" class="form-control" id="link" placeholder="Enter bookmark link">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Bookmark</button>
+                </form>
+                <div id="custom-bookmarks"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

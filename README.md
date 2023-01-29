@@ -1,2 +1,2 @@
 # Bookmark-App
- Estudos sobre LocalStorage
+ Estudos sobre LocalStorage.

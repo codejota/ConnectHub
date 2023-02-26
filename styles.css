@@ -1,50 +1,492 @@
-.custom-checkbox {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  visibility: hidden;
+/* Layout */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#0078d7;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
 }
 
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
+ 
+
+/* Bookmarks */
+
+.bookmarks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.slider {
-  position: absolute;
+.bookmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+.bookmarks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.bookmark .site-name {
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(240, 229, 229);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  }
+
+.bookmark {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem;
+  position: relative;
+  
+  width: 120px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+   overflow: hidden;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease-in-out;
+  margin: 4px;
+}
+
+.bookmarks .bookmark:nth-child(6n + 1) {
+  margin-left: 0;
+}
+
+.bookmarks .bookmark:nth-child(6n) {
+  margin-right: 0;
+}
+
+.bookmark-item {
+  width: calc(100% / 6); /* Define a largura do item de bookmark */
+  float: left; /* Faz com que os itens sejam colocados lado a lado */
+  justify-content: flex-end;
+  position: fixed;
+  top: 222px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgb(116, 41, 41);
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  
+}
+
+
+
+.bookmark:hover {
+  transform: translateY(-5px);
+}
+
+
+ .bookmark img {
+  width: 50%;
+  max-width: 80px; /* define a largura máxima da imagem */
+  height: auto; /* mantém a proporção da imagem */
+  margin-top: 1rem;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.bookmark a {
+  display: flex;
+  position:re ;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  color: #af6e73;
+  justify-content: center;
+  align-items:end;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+    
+}
+
+/* Custom bookmarks */
+
+#bookmark-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#bookmark-form .feedback {
+  margin-top: 0.5rem;
+}
+
+#bookmark-form input {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 16px;
+  border: none;
+  background-color: #f1f5f9;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+#bookmark-form .add-bookmark-button {
+  padding: 0.5rem;
+  font-size: 16px;
+  border: none;
+  background-color: #3182ce;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#bookmark-form .add-bookmark-button:hover {
+  background-color: #2563af;
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Shadows */
+.shadow-md {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effects */
+.cursor-pointer:hover {
+  transform: translateY(-3px);
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #363a41;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tradingview-widget-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+
+#bookmark-form {
+  position: fixed;
+  bottom: 50px;
+  left: 10%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#bookmark-form input[type="text"],
+#bookmark-form input[type="url"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 1px;
+  border: none;
+  background-color: #f5f3f3;
+}
+
+#bookmark-form input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #3f3f3f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#bookmark-form input[type="submit"]:hover {
+  background-color: #1c1c1c;
+}
+
+#bookmark-form .feedback {
+  margin-top: 8px;
+  font-size: 1px;
+  color: #ff0000;
+}
+
+.textitle { 
+  font-size: 15px;
+  font-weight: bold;
+  color: #706d6d;
+}
+
+.notification-actions .notification-card {
+  text-align: center;
+}
+.notification-widget {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+.notification-card {
+  width: 500px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+.notification-message {
+  margin-bottom: 20px;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+.notification-button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+
+.notification-button.update-button {
+  background-color: #0078d7;
+  margin-right: 10px;
+}
+
+.notification-button.close-button {
+  background-color: #ccc;
+}
+
+.notification-button:hover {
+  opacity: 0.8;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 20px;
+  right: 80px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: 10px;
+}
+
+.sidebar-list a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-list a:hover {
+  color: #007bff;
+}
+
+.sidebar-list i {
+  margin-right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+            
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {background: black;}
+
+canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.text-gray-400 {
+  stroke: #f0f0f0;
+}
+
+ 
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 2px;
+  position: fixed;
+  top: 0px;
+  left: 0; 
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px;
+  border-right: 1px solid #fff;
+}
+
+.navbar-item:last-child {
+  border-right: none;
+}
+
+.temperature-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.temperature-icon {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.navbar-item {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px; 
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.city-name {
+  margin-right: 10px;
+}
+
+.temperature-icon {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}

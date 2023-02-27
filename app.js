@@ -3,7 +3,7 @@ const defaultBookmarks = [
 { name: "Fluig", link: "http://cspsfluigvm01.magna.global:8081/", logo: "src/images/fluig.png" },
 { name: "Senior", link: "https://platform.senior.com.br/", logo: "src/images/senior.png" },
 { name: "Peoplenet", link: "https://hcm17.sapsf.com/sf/", logo: "src/images/people.png" },
-{ name: "CPMP Magna", link: "https://cpmp.magna.global/", logo: "src/images/magnaico.png" },
+{ name: "CPMP Magna", link: "https://cpmp.magna.global/InnovatorServer/Client", logo: "src/images/magnaico.png" },
 { name: "Crystal", link: "http://10.108.24.58:8010/default.aspx", logo: "src/images/favoritos.png" },
 { name: "Relatorios Logix", link: "http://10.108.27.121:8080/gerenciadorelatorios", logo: "src/images/relatorio.png" },
 { name: "Sharepoint ", link: "https://magna.sharepoint.com/sites/magnet", logo: "src/images/sharepoint.png" },
@@ -12,7 +12,6 @@ const defaultBookmarks = [
 { name: "Matrix", link: "https://itserviceportal.magna.global/wm", logo: "src/images/matrix.png" },
 { name: "Power BI", link: "https://app.powerbi.com/groups/me/groupWelcome", logo: "src/images/powerbi.png" },
 { name: "BCLegal", link: "http://10.108.4.10/bclegal", logo: "src/images/legalbc.png" },
-{ name: "Overtime", link: "https://manager.overtimecontrol.com.br/login", logo: "src/images/overtime.png" },
 { name: "Visio", link: "http://10.108.24.29:8024/xmlvisio/index.php", logo: "src/images/Visio.png" },
 { name: "SQTCM Tools", link: "https://apps.powerapps.com/play/2a3b959b-9b03-414d-8606-7478aac53f3b?tenantId=c760270c-f3da-4cfa-9737-03808ef5579f&source=portal&screenColor=rgba(0%2C%20134%2C%20208%2C%201)", logo: "src/images/Magnaico.png"},
 { name: "Best Practices", link: "https://magna.sharepoint.com/teams/Cosma-Brazil/SitePages/Best-Praticies-Cosma.aspx", logo: "src/images/bestpra.png" }
@@ -30,7 +29,12 @@ const defaultBookmarks = [
   
       const a = document.createElement("a");
       a.href = bookmark.link;
+      a.target = "_blank";  
       a.textContent = bookmark.name;
+
+      img.addEventListener("click", () => {
+      window.open(bookmark.link, '_blank');
+      });
   
       div.appendChild(img);
       div.appendChild(a);
@@ -49,14 +53,19 @@ const defaultBookmarks = [
     customBookmarksContainer.innerHTML = "";
     customBookmarks.forEach((bookmark, index) => {
       const div = document.createElement("div");
-      div.classList.add("bookmark");
+      div.classList.add("bookmark2");
   
       const img = document.createElement("img");
       img.src = bookmark.logo || "src/img/standard.png";
   
       const a = document.createElement("a");
       a.href = bookmark.link;
+      a.target = "_blank"; 
       a.textContent = bookmark.name;
+
+      img.addEventListener("click", () => {
+      window.open(bookmark.link, '_blank');
+      });
   
       div.appendChild(img);
       div.appendChild(a);
@@ -69,6 +78,7 @@ const defaultBookmarks = [
         localStorage.setItem("customBookmarks", JSON.stringify(customBookmarks));
         renderCustomBookmarks();
       });
+
       div.appendChild(deleteButton);
   
       customBookmarksContainer.appendChild(div);
@@ -212,7 +222,7 @@ body.addEventListener('click', function(event) {
         c.width = window.innerWidth;
 
         //chinese characters - taken from the unicode charset
-        var matrix = "Magna";
+        var matrix = "MagnaMAGNAm4gn4";
         //converting the string into an array of single characters
         matrix = matrix.split("");
 
@@ -223,7 +233,7 @@ body.addEventListener('click', function(event) {
         //x below is the x coordinate
         //1 = y co-ordinate of the drop(same for every drop initially)
         for(var x = 0; x < columns; x++)
-            drops[x] = 1; 
+            drops[x] = 2; 
 
         //drawing the characters
         function draw()
@@ -298,3 +308,18 @@ body.addEventListener('click', function(event) {
         
         updateAllTemperatures();
         setInterval(updateAllTemperatures, 600000); 
+
+
+        setInterval(function() {
+          var footer1 = document.getElementsByClassName("footer1");
+          var footer2 = document.getElementsByClassName("footer2");
+          
+          if (footer1[0].style.display === "none") {
+            footer1[0].style.display = "block";
+            footer2[0].style.display = "none";
+          } else {
+            footer1[0].style.display = "none";
+            footer2[0].style.display = "block";
+          }
+        }, 60000);
+        

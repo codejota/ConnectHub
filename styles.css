@@ -18,8 +18,8 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 800px;
-  padding: 1rem;
+  max-width: 700px;
+  padding: 2rem;
 }
 
  
@@ -38,15 +38,59 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  margin: 0.5rem;
-  width: 100px;
-  height: 100px;
+  margin: 1rem;
+  width: 60px;
+  height: 7;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
 }
+.bookmark2{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 1rem;
+  width: 60px;
+  height: 7px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: left;
+  width: 140px;
+  height: 120px;
+  background-color: rgb(253, 245, 245);
+   overflow: hidden;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease-in-out;
+  margin:3px;
+}
+
+
+.bookmark2 .site-name2 {
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(93, 21, 175, 0.5);
+  color: rgb(240, 229, 229);
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  }
+
 .bookmarks {
   display: flex;
   flex-wrap: wrap;
@@ -58,9 +102,9 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(134, 34, 34, 0.5);
   color: rgb(240, 229, 229);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -75,28 +119,26 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  margin: 0.5rem;
   position: relative;
-  
   width: 120px;
-  height: 100px;
+  height: 120px;
   background-color: rgb(255, 255, 255);
    overflow: hidden;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 2px 4px rgba(0, 0, 0, 0.1); 
   transition: transform 0.2s ease-in-out;
-  margin: 4px;
+  margin:3px;
 }
 
-.bookmarks .bookmark:nth-child(6n + 1) {
-  margin-left: 0;
+.bookmarks .bookmark:nth-child(8n + 1) {
+  margin-left: 6px;
 }
 
-.bookmarks .bookmark:nth-child(6n) {
+.bookmarks .bookmark:nth-child(8n) {
   margin-right: 0;
 }
 
 .bookmark-item {
-  width: calc(100% / 6); /* Define a largura do item de bookmark */
+  width: calc(100% / 8); /* Define a largura do item de bookmark */
   float: left; /* Faz com que os itens sejam colocados lado a lado */
   justify-content: flex-end;
   position: fixed;
@@ -121,12 +163,12 @@ body {
 
 
 .bookmark:hover {
-  transform: translateY(-5px);
+  transform: translateY(5px);
 }
 
 
  .bookmark img {
-  width: 50%;
+  width: 60%;
   max-width: 80px; /* define a largura máxima da imagem */
   height: auto; /* mantém a proporção da imagem */
   margin-top: 1rem;
@@ -144,7 +186,7 @@ body {
 
 .bookmark a {
   display: flex;
-  position:re ;
+  position: relative;
   width: 100%;
   height: 100%;
   color: white;
@@ -154,17 +196,59 @@ body {
   align-items:end;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
   opacity: 1;
     
 }
+
+
+
+.bookmark2:hover {
+  transform: translateY(5px);
+}
+
+
+ .bookmark2 img {
+  width: 60%;
+  max-width: 80px; /* define a largura máxima da imagem */
+  height: auto; /* mantém a proporção da imagem */
+  margin-top: 1rem;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.bookmark2 a {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  color: #af6e73;
+  justify-content: center;
+  align-items:end;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+    
+}
+
 
 /* Custom bookmarks */
 
 #bookmark-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -178,7 +262,7 @@ body {
   padding: 0.5rem;
   font-size: 16px;
   border: none;
-  background-color: #f1f5f9;
+  background-color: #5a5a5a;
   border-radius: 5px;
   width: 100%;
   margin-bottom: 0.5rem;
@@ -224,7 +308,7 @@ body {
 
 /* Hover Effects */
 .cursor-pointer:hover {
-  transform: translateY(-3px);
+  transform: translateY(-11px);
 }
 
 
@@ -410,7 +494,7 @@ footer {
   padding: 0;
 }
 
-body {background: black;}
+body {background: rgb(39, 37, 37);}
 
 canvas {
   position: fixed;

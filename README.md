@@ -25,14 +25,14 @@ One of the most exciting features of ConnectHub is that users can add their own 
 
 # PrintScreens
 
-
 <p align="center">
     <img width="70%" src="https://i.imgur.com/XtEQUYh.gif">
 </p>
-<p align="center">
-    <img width="70%" src="https://jotacode.dev/img-upload/Gitedit.gif">
-</p>
 
+
+<p align="center">
+    <img width="70%" src="https://i.imgur.com/A29Ztto.gif">
+</p>
 
 
 # License 

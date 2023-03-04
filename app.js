@@ -1,20 +1,17 @@
 // Default Bookmarks
 const defaultBookmarks = [
-{ name: "Fluig", link: "http://cspsfluigvm01.magna.global:8081/", logo: "src/images/fluig.png" },
-{ name: "Senior", link: "https://platform.senior.com.br/", logo: "src/images/senior.png" },
-{ name: "Peoplenet", link: "https://hcm17.sapsf.com/sf/", logo: "src/images/people.png" },
-{ name: "CPMP Magna", link: "https://cpmp.magna.global/InnovatorServer/Client", logo: "src/images/magnaico.png" },
-{ name: "Crystal", link: "http://10.108.24.58:8010/default.aspx", logo: "src/images/favoritos.png" },
-{ name: "Relatorios Logix", link: "http://10.108.27.121:8080/gerenciadorelatorios", logo: "src/images/relatorio.png" },
-{ name: "Sharepoint ", link: "https://magna.sharepoint.com/sites/magnet", logo: "src/images/sharepoint.png" },
-{ name: "BMW B2B", link: "https://b2b-sso.bmw.com/", logo: "src/images/bmw.png" },
-{ name: "PC Factory JVL", link: "http://10.108.28.90:1234/pcfui#/page/Login", logo: "src/images/pcfactory.png" },
-{ name: "Matrix", link: "https://itserviceportal.magna.global/wm", logo: "src/images/matrix.png" },
-{ name: "Power BI", link: "https://app.powerbi.com/groups/me/groupWelcome", logo: "src/images/powerbi.png" },
-{ name: "BCLegal", link: "http://10.108.4.10/bclegal", logo: "src/images/legalbc.png" },
-{ name: "Visio", link: "http://10.108.24.29:8024/xmlvisio/index.php", logo: "src/images/Visio.png" },
-{ name: "SQTCM Tools", link: "https://apps.powerapps.com/play/2a3b959b-9b03-414d-8606-7478aac53f3b?tenantId=c760270c-f3da-4cfa-9737-03808ef5579f&source=portal&screenColor=rgba(0%2C%20134%2C%20208%2C%201)", logo: "src/images/Magnaico.png"},
-{ name: "Best Practices", link: "https://magna.sharepoint.com/teams/Cosma-Brazil/SitePages/Best-Praticies-Cosma.aspx", logo: "src/images/bestpra.png" }
+  { name: "LinkedIn", link: "https://www.linkedin.com/", logo: "src/img/linkedin.png" },
+{ name: "Amazon", link: "https://www.amazon.com/", logo: "src/img/Amazon.png" },
+{ name: "Google", link: "https://www.google.com/", logo: "src/img/google.png" },
+{ name: "GitHub", link: "https://github.com/", logo: "src/img/github.png" },
+{ name: "YouTube", link: "https://www.youtube.com/", logo: "src/img/youtube.png" },
+{ name: "Facebook", link: "https://www.facebook.com/", logo: "src/img/facebook.png" },  
+{ name: "Twitter", link: "https://twitter.com/", logo: "src/img/twitter.png" },
+{ name: "Instagram", link: "https://www.instagram.com/", logo: "src/img/instagram.png" },
+{ name: "TikTok", link: "https://www.tiktok.com/", logo: "src/img/tiktok.png" },
+{ name: "Netflix", link: "https://www.netflix.com/", logo: "src/img/netflix.png" }
+
+  ,
 
   ];
   
@@ -131,73 +128,7 @@ const defaultBookmarks = [
 
 
  
-// Define o nome do cookie
-const cookieName = 'lastNotificationDate';
 
-// Obtém a referência para o widget
-const notificationWidget = document.getElementById('notification-widget');
-
-// Obtém a referência para o botão de atualizar
-const updateButton = document.querySelector('.update-button');
-
-// Obtém a referência para o botão de fechar
-const closeButton = document.querySelector('.close-button');
-
-// Função que exibe o widget de notificação
-function showNotification() {
-  // Obtém a data da última vez que a notificação foi exibida a partir do cookie
-  const lastNotificationDate = new Date(document.cookie.replace(/(?:(?:^|.*;\s*)lastNotificationDate\s*\=\s*([^;]*).*$)|^.*$/, "$1"));
-
-  // Verifica se já se passaram 7 dias desde a última notificação
-  if (isNaN(lastNotificationDate) || Date.now() - lastNotificationDate.getTime() >= 7 * 24 * 60 * 60 * 1000) {
-    // Define a data da última notificação como a data atual
-    const expires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toUTCString();
-    document.cookie = `${cookieName}=${new Date().toUTCString()};expires=${expires};path=/`;
-    
-    // Exibe o widget
-    notificationWidget.classList.remove('hidden');
-    
-    // Define o foco no botão de atualizar
-    updateButton.focus();
-    
-    // Desfoca o restante da página
-    document.body.classList.add('blur');
-  }
-}
-
-// Função que oculta o widget de notificação
-function hideNotification() {
-  // Oculta o widget
-  notificationWidget.classList.add('hidden');
-  
-  // Remove o desfoque do restante da página
-  document.body.classList.remove('blur');
-}
-
-// Adiciona um evento de clique no botão de atualizar
-updateButton.addEventListener('click', function() {
-  // Abre a tela do Windows Update
-  window.location.href = 'ms-settings:windowsupdate?activationSource=SMC-IA-4027667';
-  
-  // Define a data do cookie de notificação como a data atual
-  const expires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toUTCString();
-  document.cookie = `${cookieName}=${new Date().toUTCString()};expires=${expires};path=/`;
-  
-  // Oculta o widget
-  hideNotification();
-});
-
-// Adiciona um evento de clique no botão de fechar
-closeButton.addEventListener('click', function() {
-  // Remove a data do cookie de notificação
-  document.cookie = `${cookieName}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/`;
-  
-  // Oculta o widget
-  hideNotification();
-});
-
-// Exibe a notificação após 3 segundos
-setTimeout(showNotification, 2000);
 
 
 const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -222,7 +153,7 @@ body.addEventListener('click', function(event) {
         c.width = window.innerWidth;
 
         //chinese characters - taken from the unicode charset
-        var matrix = "MagnaMAGNAm4gn4";
+        var matrix = "ConnectHub";
         //converting the string into an array of single characters
         matrix = matrix.split("");
 

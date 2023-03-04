@@ -26,9 +26,9 @@ One of the most exciting features of ConnectHub is that users can add their own 
 # PrintScreens
 
 
-![Preview](/src/img/preview.gif)
-
-![Preview](/src/img/preview2.gif)
+| <img src="/src/img/preview.gif" alt="Preview" style="width: 80%;"> | <img src="/src/img/preview2.gif" alt="Preview" style="width: 250%;"> |
+| --- | --- |
+| Tela inicial | Demonstração Bookmark |
 
 
 

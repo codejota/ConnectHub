@@ -1,6 +1,6 @@
  
 <p align="center">
-    <img width="20%" src="https://jotacode.dev/img-upload/logoconnect.png" alt="Material logo">
+    <img width="30%" src="https://jotacode.dev/img-upload/logoconnect.png" alt="Material logo">
 </p>
 
 
@@ -28,8 +28,17 @@ One of the most exciting features of ConnectHub is that users can add their own 
 
 | <img src="/src/img/preview.gif" alt="Preview" style="width: 100%;"> | <img src="/src/img/preview2.gif" alt="Preview" style="width: 250%;"> |
 | --- | --- |
-| Tela inicial | Demonstração Bookmark |
+| Home | LocalStorage Demo |
 
+
+
+## Final Thoughts
+
+First off, I wanna give a shout-out to everyone who helped make this project happen. ConnectHub taught me a ton about LocalStorage and API consumption, and I had a blast building it. There were definitely some bumps in the road, but with the help of my fellow devs, we were able to push through.
+
+Looking ahead, I'm excited to add support for more currencies and maybe even a dark mode for all you night owls out there. If you've got any other suggestions for features or improvements, hit me up!
+
+All in all, this has been an awesome journey, and I'm grateful for all the lessons I've learned along the way. Thanks again to everyone who made it possible, and let's keep pushing the limits of what we can achieve!
 
 
 
@@ -37,9 +46,4 @@ One of the most exciting features of ConnectHub is that users can add their own 
 ```
 MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
